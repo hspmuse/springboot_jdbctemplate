@@ -23,7 +23,6 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="springboot_sample" />
-        <module name="SpringConf01" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
