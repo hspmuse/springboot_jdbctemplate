@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/OCBFraudAPI/OCBFraudAPI.iml" filepath="$PROJECT_DIR$/OCBFraudAPI/OCBFraudAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringConf01.iml" filepath="$PROJECT_DIR$/SpringConf01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_sample/springboot_sample.iml" filepath="$PROJECT_DIR$/springboot_sample/springboot_sample.iml" />
+    </modules>
+  </component>
+</project>
