@@ -11,4 +11,11 @@ public interface UserService {
 
     public List<User> selectUserList();
 
+    public User selectUserById(String id);
+
+    public void insertUser(User user);
+
+    public void updateUser(String id, User user);
+
+    public void deleteUser(String id);
 }

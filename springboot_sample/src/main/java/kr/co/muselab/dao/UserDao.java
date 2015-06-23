@@ -21,4 +21,24 @@ public class UserDao {
         String query = "select id, name, age from user";
         return jdbcTemplate.query(query, new BeanPropertyRowMapper(User.class));
     }
+
+    public User selectUserById(String id) {
+        String query = "select id, name, age from user where id=? ";
+        return (User)jdbcTemplate.queryForObject(query, new Object[]{id}, new BeanPropertyRowMapper(User.class));
+    }
+
+    public void insertUser(User user) {
+        String query = "insert into user(id,name,age) values (?,?,?) ";
+        jdbcTemplate.update(query, new Object[]{user.getId(), user.getName(), user.getAge()});
+    }
+
+    public void updateUser(String id, User user) {
+        String query = "update user set name=?, age=? where id=? ";
+        jdbcTemplate.update(query, new Object[]{ user.getName(), user.getAge(), id});
+    }
+
+    public void deleteUser(String id) {
+        String query = "delete from user where id=?";
+        jdbcTemplate.update(query,new Object[]{id});
+    }
 }
