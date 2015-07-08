@@ -19,5 +19,4 @@ public interface UserService {
 
     public void deleteUser(String id);
 
-    public void doWork();
 }

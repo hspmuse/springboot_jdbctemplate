@@ -38,15 +38,4 @@ public class UserServiceImpl implements UserService {
     public void deleteUser(String id) {
         userDao.deleteUser(id);
     }
-
-    @Async("workExecutor")
-    @Override
-    public void doWork() {
-        try {
-            Thread.sleep(10*1000);
-            logger.debug("complete work!!");
-        } catch(InterruptedException e) {
-            logger.debug(e.getMessage());
-        }
-    }
 }

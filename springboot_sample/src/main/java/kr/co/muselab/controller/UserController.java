@@ -51,9 +51,5 @@ public class UserController {
         userService.deleteUser(id);
     }
 
-    @RequestMapping(value="/users/async")
-    public void asyncTest() {
-        userService.doWork();
-        logger.debug("Controller doWork End!!");
-    }
+
 }
