@@ -18,4 +18,6 @@ public interface UserService {
     public void updateUser(String id, User user);
 
     public void deleteUser(String id);
+
+    public void doWork();
 }

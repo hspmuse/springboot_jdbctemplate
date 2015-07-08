@@ -5,6 +5,7 @@ import kr.co.muselab.domain.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -36,5 +37,16 @@ public class UserServiceImpl implements UserService {
 
     public void deleteUser(String id) {
         userDao.deleteUser(id);
+    }
+
+    @Async("workExecutor")
+    @Override
+    public void doWork() {
+        try {
+            Thread.sleep(10*1000);
+            logger.debug("complete work!!");
+        } catch(InterruptedException e) {
+            logger.debug(e.getMessage());
+        }
     }
 }

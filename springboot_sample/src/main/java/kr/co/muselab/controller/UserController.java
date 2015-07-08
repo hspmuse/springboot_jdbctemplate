@@ -47,7 +47,13 @@ public class UserController {
     }
 
     @RequestMapping(value="/users/{id}", method = RequestMethod.DELETE)
-    public void updateUser(@PathVariable("id") String id) {
+    public void deleteUser(@PathVariable("id") String id) {
         userService.deleteUser(id);
+    }
+
+    @RequestMapping(value="/users/async")
+    public void asyncTest() {
+        userService.doWork();
+        logger.debug("Controller doWork End!!");
     }
 }
